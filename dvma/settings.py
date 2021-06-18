@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dam',
+    'hmi'
 ]
 
 MIDDLEWARE = [
@@ -106,4 +108,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-from local_settings import *
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+from .local_settings import *
